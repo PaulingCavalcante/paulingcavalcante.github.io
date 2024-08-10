@@ -86,7 +86,7 @@ nav ul li a:hover {
 .social-media {
     position: fixed;
     left: 1.25rem;
-    top: 70%;
+    top: 60%;
     transform: translateY(-50%);
     z-index: 1000;
 }
