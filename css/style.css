@@ -13,7 +13,12 @@ body {
     scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 10px;
     color: #e0e0e0;
@@ -63,8 +68,57 @@ nav ul li a:hover {
     color: #4682b4;
 }
 
-.corpo{
-    margin: 1rem 0 0 0;
+
+/* Estilo da barra lateral de redes sociais */
+.social-media {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+.social-media ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* Espaçamento entre os ícones */
+}
+
+.social-media ul li {
+    margin: 0;
+}
+
+.social-media ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #222;
+    /* Cor de fundo dos ícones */
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.social-media ul li a svg {
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    /* Cor dos ícones */
+}
+
+.social-media ul li a:hover {
+    background-color: #ff0054;
+    /* Cor de fundo ao passar o mouse */
+}
+
+
+.corpo {
+    margin: 0 5rem 0 5rem;
 }
 
 .section {
@@ -156,7 +210,8 @@ nav ul li a:hover {
     transition: width 0.5s ease;
 }
 
-form input, form textarea {
+form input,
+form textarea {
     width: 100%;
     padding: 15px;
     margin-bottom: 15px;
