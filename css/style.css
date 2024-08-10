@@ -69,10 +69,14 @@ nav ul li a:hover {
 }
 
 
+.bg-main{
+    
+}
+
 /* Estilo da barra lateral de redes sociais */
 .social-media {
     position: fixed;
-    left: 20px;
+    left: 1.25rem;
     top: 50%;
     transform: translateY(-50%);
     z-index: 1000;
@@ -101,7 +105,7 @@ nav ul li a:hover {
     background-color: #222;
     /* Cor de fundo dos ícones */
     border-radius: 50%;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.5s ease;
 }
 
 .social-media ul li a svg {
@@ -112,13 +116,16 @@ nav ul li a:hover {
 }
 
 .social-media ul li a:hover {
-    background-color: #ff0054;
+    background-color: #4682b4;
+    transform: scale(110%);
+    transition: 0.5s;
+
     /* Cor de fundo ao passar o mouse */
 }
 
 
 .corpo {
-    margin: 0 5rem 0 5rem;
+    margin: 1.5rem 5rem 0 5rem;
 }
 
 .section {
