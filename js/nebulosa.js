@@ -24,7 +24,7 @@ const starsMaterial = new THREE.PointsMaterial({
     color: 0xffffff,
     size: 1,
     transparent: true,
-    opacity: 0.7,
+    opacity: 1,
 });
 
 const starField = new THREE.Points(starsGeometry, starsMaterial);

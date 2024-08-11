@@ -1,19 +1,26 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const navLinks = document.querySelectorAll("nav ul li a");
+document.addEventListener("DOMContentLoaded", function () {
 
-    navLinks.forEach(link => {
-        link.addEventListener("click", function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute("href").substring(1);
-            const targetSection = document.getElementById(targetId);
-            const offsetPosition = targetSection.offsetTop - 150;
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: "smooth"
-            });
+    const main = document.querySelector("#title");
+
+    main.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0
         });
     });
 
     // Atualizar ano atual no footer
     document.getElementById("ano-atual").textContent = new Date().getFullYear();
 });
+
+const verificarPosicaoRolagem = () => {
+    if (window.scrollY > 100) {
+        const header = document.querySelector("header")
+        header.classList.remove("translucid")
+    } else {
+        const header = document.querySelector("header")
+        header.classList.add("translucid")
+    }
+}
+
+
+window.addEventListener('scroll', verificarPosicaoRolagem);
