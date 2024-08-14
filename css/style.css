@@ -6,29 +6,17 @@
     scroll-behavior: smooth;
 }
 
+::selection{
+    background-color: white;
+    color: black;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: #f5f5f5;
     background-color: #121212;
     scroll-behavior: smooth;
-}
-
-::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    border-radius: 0;
-    background-color: #D0D4CE;
-}
-
-::-webkit-scrollbar {
-    width: 6px;
-    background-color: #D0D4CE;
-}
-
-::-webkit-scrollbar-thumb {
-    border-radius: 0;
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
-    background-color: #71806B;
 }
 
 h1,
@@ -44,7 +32,7 @@ h6 {
 
 header {
     background: #1c1c1c;
-    color: #fff;
+    color: #0f0505;
     padding: 20px 0;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -58,7 +46,15 @@ header .logo h1 {
     font-size: 28px;
     font-weight: bold;
     letter-spacing: 2px;
-    background-image: linear-gradient(to bottom, #004883, #5291c5, #40e0d0);
+    background: hsla(217, 100%, 50%, 1);
+
+    background: linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+
+    background: -moz-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+
+    background: -webkit-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#0061FF", endColorstr="#60EFFF", GradientType=1);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
