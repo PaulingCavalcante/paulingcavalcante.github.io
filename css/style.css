@@ -100,6 +100,7 @@ nav ul li a:hover {
 }
 
 .bg-main {
+    /* position: absolute; */
     height: 80svh;
     width: 100svw;
 }
@@ -108,8 +109,8 @@ nav ul li a:hover {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    /* width: 100%; */
+    /* height: 100%; */
 }
 
 /* Estilo da barra lateral de redes sociais */
