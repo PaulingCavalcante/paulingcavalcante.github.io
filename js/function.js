@@ -24,3 +24,19 @@ const verificarPosicaoRolagem = () => {
 
 
 window.addEventListener('scroll', verificarPosicaoRolagem);
+
+document.addEventListener("DOMContentLoaded", function() {
+    const typingElement = document.querySelector('.typing-effect');
+    const text = "Olá, eu sou Paulo Cavalcante, um analista de desenvolvimento de sistemas júnior.";
+    let index = 0;
+
+    function type() {
+        if (index < text.length) {
+            typingElement.textContent += text.charAt(index);
+            index++;
+            setTimeout(type, 100); // Velocidade da digitação
+        }
+    }
+
+    type();
+});
