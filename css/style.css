@@ -347,33 +347,13 @@ footer p span {
     font-family: 'Roboto', sans-serif;
     color: #f5f5f5;
     font-size: 24px;
-    border-right: 2px solid #4682b4;
-    /* Cor do cursor */
+    border-right: 2px solid #4682b4; /* Cor do cursor */
     white-space: nowrap;
     overflow: hidden;
-    width: 0;
-    /* Inicialmente escondido */
-    animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
-}
-
-@keyframes typing {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 100%;
-    }
+    animation: blink-caret 0.75s step-end infinite;
 }
 
 @keyframes blink-caret {
-
-    from,
-    to {
-        border-color: transparent;
-    }
-
-    50% {
-        border-color: #4682b4;
-    }
+    from, to { border-color: transparent; }
+    50% { border-color: #4682b4; }
 }

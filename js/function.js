@@ -26,17 +26,46 @@ const verificarPosicaoRolagem = () => {
 window.addEventListener('scroll', verificarPosicaoRolagem);
 
 document.addEventListener("DOMContentLoaded", function() {
-    const typingElement = document.querySelector('.typing-effect');
-    const text = "Olá, eu sou Paulo Cavalcante, um analista de desenvolvimento de sistemas júnior.";
-    let index = 0;
+    const el_text = document.querySelector("#text");
+    const texts = [
+        "Desenvolvedor.",
+        "Designer.",
+        "sla!"
+    ];
+    let textIndex = 0;
+    let isDeleting = false;
+    const typingSpeed = 50; // Velocidade de digitação
+    const deletingSpeed = 50; // Velocidade de apagamento
+    const pauseTime = 500; // Tempo de pausa após digitar e antes de apagar
 
     function type() {
-        if (index < text.length) {
-            typingElement.textContent += text.charAt(index);
-            index++;
-            setTimeout(type, 100); // Velocidade da digitação
+        const getText = texts[textIndex];
+        const textSplit = getText.split('');
+        el_text.textContent = "";
+
+        textSplit.forEach((item, line) => {
+            setTimeout(() => {
+                el_text.textContent += item;
+            }, typingSpeed * line);
+        });
+
+        setTimeout(() => {
+            isDeleting = true;
+            deleteText();
+        }, typingSpeed * textSplit.length + pauseTime);
+    }
+
+    function deleteText() {
+        const textContent = el_text.textContent;
+        if (textContent.length > 0) {
+            el_text.textContent = textContent.slice(0, -1);
+            setTimeout(deleteText, deletingSpeed);
+        } else {
+            isDeleting = false;
+            textIndex = (textIndex + 1) % texts.length;
+            setTimeout(type, pauseTime);
         }
     }
 
-    type();
+    type(); // Inicia o processo
 });
