@@ -58,8 +58,10 @@ header .logo h1 {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: white;
+    color: black;
     transition: 0.3s;
+
+    user-select: none;
 }
 
 header .logo h1:hover {
@@ -114,6 +116,7 @@ nav ul li a:hover {
 #nebula {
     width: 100svw;
     height: 100%;
+    z-index: 1;
 }
 
 /* Estilo da barra lateral de redes sociais */
@@ -331,7 +334,7 @@ footer p span {
     /* Esconder qualquer conteúdo que possa ultrapassar os limites do canvas */
 }
 
-.teste {
+.text-bg {
     position: absolute;
     top: 50%;
     left: 50%;

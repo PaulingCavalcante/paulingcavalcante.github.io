@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function type() {
         const getText = texts[textIndex];
         const textSplit = getText.split('');
-        el_text.textContent = "";
+        el_text.textContent = " ";
 
         textSplit.forEach((item, line) => {
             setTimeout(() => {
