@@ -13,7 +13,10 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 const verificarPosicaoRolagem = () => {
-    if (window.scrollY > 650) {
+
+    let height = document.getElementById("nebula").clientHeight;
+    
+    if (window.scrollY > 30) {
         const header = document.querySelector("header")
         header.classList.remove("translucid")
     } else {
@@ -25,7 +28,7 @@ const verificarPosicaoRolagem = () => {
 
 window.addEventListener('scroll', verificarPosicaoRolagem);
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const el_text = document.querySelector("#text");
     const texts = [
         "Desenvolvedor.",
