@@ -1,12 +1,25 @@
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-const renderer = new THREE.WebGLRenderer();
+const renderer = new THREE.WebGLRenderer({ antialias: true }); // Adicionei antialias para suavizar as bordas
 
-renderer.setSize(window.innerWidth, window.innerHeight);
+// Ajuste o tamanho do canvas para a viewport
+function resizeRenderer() {
+    const canvas = document.getElementById("nebula")
+
+    let width = canvas.clientWidth - 10;
+    let height = canvas.clientHeight;
+
+    renderer.setSize(width, height);
+    camera.aspect = width / height;
+    camera.updateProjectionMatrix();
+}
+
+// Inicialize o tamanho correto do canvas
+resizeRenderer();
 document.getElementById('nebula').appendChild(renderer.domElement);
 
 const starsGeometry = new THREE.BufferGeometry();
-const starCount = 10000;
+const starCount = 4000;
 const positions = new Float32Array(starCount * 3);
 
 for (let i = 0; i < starCount; i++) {
@@ -43,11 +56,5 @@ function animate() {
 
 animate();
 
-window.addEventListener('resize', () => {
-    const width = window.innerWidth;
-    const height = window.innerHeight;
-
-    renderer.setSize(width, height);
-    camera.aspect = width / height;
-    camera.updateProjectionMatrix();
-});
+// Atualize o tamanho do canvas quando a janela for redimensionada
+window.addEventListener('resize', resizeRenderer);

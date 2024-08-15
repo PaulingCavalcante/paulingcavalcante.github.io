@@ -1,4 +1,3 @@
-/* Definições globais */
 * {
     margin: 0;
     padding: 0;
@@ -17,6 +16,7 @@ body {
     color: #f5f5f5;
     background-color: #121212;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 h1,
@@ -31,15 +31,15 @@ h6 {
 }
 
 header {
-    background: #1c1c1c;
-    color: #0f0505;
+    background-color: #121212;
     padding: 20px 0;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    position: sticky;
+    position: fixed;
     top: 0;
     transition: 0.3s;
     z-index: 1000;
+    width: 100%;
 }
 
 header .logo h1 {
@@ -71,6 +71,10 @@ header a {
     text-decoration: none;
 }
 
+nav{
+    background-color: transparent;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -100,17 +104,15 @@ nav ul li a:hover {
 }
 
 .bg-main {
-    /* position: absolute; */
-    height: 80svh;
-    width: 100svw;
+    height: 100svh;
+    width: 100%;
+    position: relative;
+    /* Certifique-se de que a largura é 100% */
 }
 
 #nebula {
-    position: absolute;
-    top: 0;
-    left: 0;
-    /* width: 100%; */
-    /* height: 100%; */
+    width: 100svw;
+    height: 100%;
 }
 
 /* Estilo da barra lateral de redes sociais */

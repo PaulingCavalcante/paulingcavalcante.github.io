@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 const verificarPosicaoRolagem = () => {
-    if (window.scrollY > 100) {
+    if (window.scrollY > 650) {
         const header = document.querySelector("header")
         header.classList.remove("translucid")
     } else {
