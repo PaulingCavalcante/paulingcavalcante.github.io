@@ -1,3 +1,8 @@
+:root {
+    --primary-color: #4682b4;
+    --font-color: #ffffff;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,14 +11,14 @@
 }
 
 ::selection {
-    background-color: white;
+    background-color: var(--font-color);
     color: black;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    color: #f5f5f5;
+    color: var(--font-color);
     background-color: #121212;
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -26,8 +31,7 @@ h4,
 h5,
 h6 {
     font-family: 'Montserrat', sans-serif;
-    margin-bottom: 10px;
-    color: #e0e0e0;
+    color: var(--font-color);
 }
 
 header {
@@ -43,25 +47,21 @@ header {
 }
 
 header .logo h1 {
+    color: black;
     font-size: 28px;
     font-weight: bold;
     letter-spacing: 2px;
+    transition: 0.3s;
+    user-select: none;
+
     background: hsla(217, 100%, 50%, 1);
-
-    background: linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
-
-    background: -moz-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
-
-    background: -webkit-linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
-
+    background: linear-gradient(90deg, #0062ff 0%, #61efff 100%);
+    background: -moz-linear-gradient(90deg, #0062ff 0%, #61efff 100%);
+    background: -webkit-linear-gradient(90deg, #0062ff 0%, #61efff 100%);
     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#0061FF", endColorstr="#60EFFF", GradientType=1);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: black;
-    transition: 0.3s;
-
-    user-select: none;
 }
 
 header .logo h1:hover {
@@ -96,7 +96,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #4682b4;
+    color: var(--primary-color);
     transition: 0.3s;
 }
 
@@ -162,7 +162,7 @@ nav ul li a:hover {
 }
 
 .social-media ul li a:hover {
-    background-color: #4682b4;
+    background-color: var(--primary-color);
     transform: scale(110%);
     transition: 0.5s;
 
@@ -250,14 +250,14 @@ nav ul li a:hover {
     margin-bottom: 10px;
 }
 
-.barra-proficiencia {
+.barraProficiencia {
     background: #3a3a3a;
     border-radius: 5px;
     overflow: hidden;
     margin-top: 10px;
 }
 
-.barra-proficiencia .nivel {
+.barraProficiencia .nivel {
     height: 10px;
     background: #4caf50;
     transition: width 0.5s ease;
@@ -279,7 +279,7 @@ form textarea {
 form button {
     width: 100%;
     padding: 15px;
-    background: #4682b4;
+    background: var(--primary-color);
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -321,7 +321,7 @@ footer p {
 
 footer p span {
     font-weight: bold;
-    color: #4682b4;
+    color: var(--primary-color);
 }
 
 #nebula {
@@ -344,19 +344,4 @@ footer p span {
     /* Garantir que o texto fique sobre a nebula */
     text-align: center;
     color: #f5f5f5;
-}
-
-.typing-effect {
-    font-family: 'Roboto', sans-serif;
-    color: #f5f5f5;
-    font-size: 24px;
-    border-right: 2px solid #4682b4; /* Cor do cursor */
-    white-space: nowrap;
-    overflow: hidden;
-    animation: blink-caret 0.75s step-end infinite;
-}
-
-@keyframes blink-caret {
-    from, to { border-color: transparent; }
-    50% { border-color: #4682b4; }
 }

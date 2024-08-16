@@ -7,7 +7,7 @@ try {
     function resizeRenderer() {
         const canvas = document.getElementById("nebula")
 
-        let width = canvas.clientWidth - 10;
+        let width = canvas.clientWidth;
         let height = canvas.clientHeight;
 
         renderer.setSize(width, height);
