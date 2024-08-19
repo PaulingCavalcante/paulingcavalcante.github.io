@@ -174,13 +174,17 @@ nav ul li a:hover {
 }
 
 .section {
-    padding: 80px 20px;
+    padding: 5rem 8rem;
     text-align: center;
     background: #1e1e1e;
     margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     scroll-margin-top: 8rem;
+}
+
+#sobre-mim p {
+    text-align: justify;
 }
 
 .section:nth-child(even) {
