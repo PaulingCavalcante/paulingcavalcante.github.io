@@ -12,8 +12,26 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("ano-atual").textContent = new Date().getFullYear();
 });
 
-const verificarPosicaoRolagem = () => {
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
 
+hamburger.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("hidden")
+}
+
+const navLink = document.querySelectorAll(".nav-link");
+
+navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+function closeMenu() {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+}
+
+const verificarPosicaoRolagem = () => {
     let height = document.getElementById("nebula").clientHeight;
     
     if (window.scrollY > 30) {
@@ -24,6 +42,5 @@ const verificarPosicaoRolagem = () => {
         header.classList.add("translucid")
     }
 }
-
 
 window.addEventListener('scroll', verificarPosicaoRolagem);

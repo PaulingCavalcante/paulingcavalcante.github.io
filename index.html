@@ -20,22 +20,26 @@
 
 <body>
     <script>console.log("Site ainda em produção!")</script>
-    <header class="translucid">
-        <div class="logo" id="title">
-            <h1><a href="#">PAULO CAVALCANTE</a></h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#sobre-mim">Sobre Mim</a></li>
-                <li><a href="#formacao">Formação</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#curriculo">Currículo</a></li>
-                <!-- <li><a href="#testemunhos">Testemunhos</a></li> -->
-                <li><a href="#portfolio">Portfólio</a></li>
-                <li><a href="#contato">Contato</a></li>
+    <header class="header translucid">
+        <nav class="navbar">
+            <a href="#" class="logo">
+                <h1>Paulo Cavalcante</h1>
+            </a>
+            <ul id="itens" class="nav-menu hidden">
+                <li class="nav-item"><a href="#sobre-mim" class="nav-link">Sobre Mim</a></li>
+                <li class="nav-item"><a href="#formacao" class="nav-link">Formação</a></li>
+                <li class="nav-item"><a href="#habilidades" class="nav-link">Habilidades</a></li>
+                <li class="nav-item"><a href="#portfolio" class="nav-link">Portfólio</a></li>
+                <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
             </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
     </header>
+
     <div class="bg-main" id="bg">
         <div id="nebula">
             <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -98,27 +102,28 @@
             <h2>Sobre Mim</h2>
             <img src="https://avatars.githubusercontent.com/u/92171797?s=400&u=3084494c3a3efe066f884866987403163d08f62d&v=4"
                 alt="Foto Profissional">
-            <br>
-            <br>
 
             <p>
                 Sou formado como Técnico em Desenvolvimento de Sistemas pela Etec Carmine Biagio Tundisi e atualmente
                 estou cursando Análise e Desenvolvimento de Sistemas (ADS) no Instituto Federal de São Paulo (IFSP).
                 Atuo como Analista de TI Júnior na 3E Consulting, onde estou alocado na Santa Casa de Atibaia,
                 contribuindo para o desenvolvimento e manutenção de soluções tecnológicas que apoiam as operações
-                hospitalares."
+                hospitalares.
             </p>
             <p>
-                Atuo como Analista de TI Júnior na 3E Consulting, onde estou alocado na Santa Casa de Atibaia. Nesta
-                posição, contribuo significativamente para o desenvolvimento e manutenção de soluções tecnológicas que
-                apoiam as operações hospitalares, utilizando uma ampla gama de tecnologias, incluindo Python, React,
-                Node.JS e Java. Minha trajetória profissional inclui uma experiência anterior como Analista para Help
-                Desk, onde desenvolvi habilidades em suporte técnico e resolução de problemas.</p>
+                Além disso, atuo como Analista e Desenvolvedor de Sistemas freelancer, aplicando uma ampla gama de
+                tecnologias, incluindo Python, React, Node.JS, Java e Arduíno. Minha experiência como Analista para Help
+                Desk desenvolveu minhas habilidades em suporte técnico, enquanto meu trabalho como desenvolvedor
+                freelancer
+                aprimorou minha capacidade de analisar, projetar e implementar soluções de software que atendem às
+                necessidades específicas de cada cliente.
+            </p>
             <p>
-                Possuo fluência em português, inglês intermediário e conhecimentos básicos de espanhol. Minhas
+                Possuo inglês avançado e conhecimentos intermediáios de espanhol. Minhas
                 principais habilidades incluem capacidade analítica, facilidade em aprender novas tecnologias, liderança
                 e organização, o que me permite lidar eficientemente com desafios complexos no ambiente de TI.
             </p>
+
         </section>
 
         <section id="formacao" class="section">
@@ -149,15 +154,6 @@
             <h2>Currículo</h2>
             <p>Resumo dos pontos principais do seu currículo.</p>
             <a href="curriculo.pdf" download>Baixar Currículo</a>
-        </section>
-
-        <section id="testemunhos" class="section">
-            <h2>Testemunhos e Recomendações</h2>
-            <div class="testemunho">
-                <p>"Excelente profissional, sempre entregue o trabalho com alta qualidade!"</p>
-                <p>- Cliente XYZ</p>
-            </div>
-            <!-- Adicione mais testemunhos conforme necessário -->
         </section>
 
         <section id="portfolio" class="section">

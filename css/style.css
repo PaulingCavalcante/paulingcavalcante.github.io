@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Poppins:wght@400;700&family=Roboto:wght@400;500&display=swap');
+
 :root {
     --primary-color: #4682b4;
     --font-color: #ffffff;
@@ -8,102 +11,12 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-family: 'inter', sans-serif;
 }
 
 ::selection {
     background-color: var(--font-color);
     color: black;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    color: var(--font-color);
-    background-color: #121212;
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: 'Montserrat', sans-serif;
-    color: var(--font-color);
-}
-
-header {
-    background-color: #121212;
-    padding: 20px 0;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    position: fixed;
-    top: 0;
-    transition: 0.3s;
-    z-index: 1000;
-    width: 100%;
-}
-
-header .logo h1 {
-    color: black;
-    font-size: 28px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    transition: 0.3s;
-    user-select: none;
-
-    background: #0062ff;
-    background: linear-gradient(90deg, #0062ff 0%, #61efff 100%);
-    background: -moz-linear-gradient(90deg, #0062ff 0%, #61efff 100%);
-    background: -webkit-linear-gradient(90deg, #0062ff 0%, #61efff 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#0061FF", endColorstr="#60EFFF", GradientType=1);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-header .logo h1:hover {
-    scale: 1.02;
-    transition: 0.3s;
-}
-
-header a {
-    text-decoration: none;
-}
-
-nav {
-    background-color: transparent;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 5px;
-    transition: 0.3s;
-}
-
-nav ul li a:hover {
-    color: var(--primary-color);
-    transition: 0.3s;
-}
-
-.translucid {
-    background-color: transparent;
-    scale: 1;
-    transition: 0.3s;
 }
 
 .bg-main {
@@ -119,6 +32,26 @@ nav ul li a:hover {
     z-index: 1;
 }
 
+body {
+    line-height: 1.6;
+    color: var(--font-color);
+    background-color: #303030;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--font-color);
+
+    font-family: 'Poppins', sans-serif;
+}
+
 /* Estilo da barra lateral de redes sociais */
 .social-media {
     position: fixed;
@@ -126,6 +59,8 @@ nav ul li a:hover {
     top: 60%;
     transform: translateY(-50%);
     z-index: 1000;
+    align-items: center;
+    justify-content: center;
 }
 
 .social-media ul {
@@ -134,7 +69,7 @@ nav ul li a:hover {
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 1rem;
     /* Espaçamento entre os ícones */
 }
 
@@ -148,17 +83,16 @@ nav ul li a:hover {
     justify-content: center;
     width: 40px;
     height: 40px;
-    background-color: #222;
+    background-color: #1f1f1f;
     /* Cor de fundo dos ícones */
     border-radius: 50%;
     transition: background-color 0.5s ease;
+    border: #00000034 solid 0.1px;
 }
 
 .social-media ul li a svg {
-    width: calc(1.3rem - 5%);
-    height: calc(1.3rem - 5%);
-    /* width: 50%;
-    height: 50%; */
+    width: 50%;
+    height: 50%;
     color: #fff;
     /* Cor dos ícones */
 }
@@ -167,16 +101,17 @@ nav ul li a:hover {
     background-color: var(--primary-color);
     transform: scale(110%);
     transition: 0.5s;
+    border: #fff solid 0.1px;
 }
 
-.section p{
+.section p {
     text-indent: 2rem;
     text-align: justify;
     line-height: 2rem;
     margin: 1.2rem 0 1.2rem 0;
 }
 
-.section p:nth-last-child(1){
+.section p:nth-last-child(1) {
     margin-bottom: 0;
 }
 
@@ -185,17 +120,18 @@ nav ul li a:hover {
 }
 
 .section {
-    padding: 6% 8%;
+    padding: 3% 8% 6% 8%;
     text-align: center;
-    background: #1e1e1e;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    scroll-margin-top: 8rem;
-}
-
-.section:nth-child(even) {
     background: #2c2c2c;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 1);
+    scroll-margin-top: rem;
+    backdrop-filter: blur(25px) saturate(180%);
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    background-color: rgba(44, 44, 44, 0.8);
+    border-radius: 1rem;
+    border: 1px solid rgba(168, 168, 168, 0.445);
 }
 
 .section h2 {
@@ -204,11 +140,12 @@ nav ul li a:hover {
     color: #ffffff;
 }
 
-.section img {
-    max-width: 15rem;
+#sobre-mim img {
     border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
+    max-width: 15rem;
+    margin-bottom: 0.8rem;
 }
 
 .section img:hover {

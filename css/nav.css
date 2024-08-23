@@ -1,130 +1,140 @@
-/* CSS para redefinir todos os designs
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-@font-face {
-    font-family: fonte-nav;
-    src: url('../fonts/Pokemon-Hollow.ttf');
-}
-
-li {
-    list-style: none;
-}
-
+/* Geral */
 a {
     text-decoration: none;
 }
 
-/* adicionar estilos aos elementos */
-
-.header {
-    border-bottom: 1px solid #E2E8F0;
-    background-color: var(--bg-nav-color);
-    font-family: fonte-nav;
-    position: relative;
-    z-index: 999;
-    align-self: center;
-    padding: 1rem;
+header {
+    background-color: #121212;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: 0.3s;
 }
 
+/* Logo */
+header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-left: 5%;
+    width: 100%;
+}
+
+header .logo h1 {
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #0062ff 0%, #61efff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+    transition: 0.3s;
+    user-select: none;
+}
+
+header .logo h1:hover {
+    transform: scale(1.02);
+}
+
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.hamburger {
-    display: none;
-}
-
-.bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background-color: #fff;
-}
-
-.nav-menu {
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
     display: flex;
-    justify-content: space-between;
-    /* align-items: center;
-    text-align: center; */
-    margin-right: 6rem;
 }
 
 .nav-item {
-    margin-left: 4rem;
-}
-
-.nav-item:nth-child(1) {
-    margin-left: 2rem;
+    margin: 0 1rem;
+    white-space: nowrap;
+    /* Corrige a quebra de linha dos itens */
 }
 
 .nav-link {
-    font-size: 1.5rem;
-    font-weight: 400;
+    font-size: 1rem;
     color: var(--font-nav-color);
+    padding: 5px;
+    transition: 0.3s;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .nav-link:hover {
     color: #482ff7;
 }
 
-.nav-logo {
-    margin: 0;
-    display: flex;
-    /* Adiciona essa linha */
-    align-items: center;
-    /* Adiciona essa linha */
-    font-size: 2rem;
-    font-weight: 500;
-    color: #fff;
+/* Hambúrguer Menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
 }
 
-.nav-logo>img {
-    max-width: 30%;
-    min-width: 10rem;
-    margin: auto;
-    transition: all 1s ease-in-out;
+.bar {
+    background-color: #fff;
+    display: block;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    width: 25px;
 }
 
+#itens {
+    margin-right: 5%;
+}
 
-@media only screen and (max-width: 850px) {
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 5rem;
-        flex-direction: column;
-        background-color: #222;
-        width: 100%;
-        border-radius: 10px;
-        text-align: center;
-        transition: 0.3s;
-        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+/* Responsivo */
+@media only screen and (max-width: 830px) {
+
+
+    header .logo {
+        align-items: center;
+        justify-content: center;
+        margin: 0;
     }
 
-    .nav-link {
-        color: #fff;
+    .logo {
+        width: 100%;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 9rem;
+        left: 0;
+        width: 100%;
+        background-color: #222;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        transition: 0.3s;
     }
 
     .nav-menu.active {
-        left: 0;
+        display: flex;
     }
 
     .nav-item {
-        margin: 2.5rem 0;
+        margin: 1rem 0;
+        text-align: center;
     }
 
     .hamburger {
         display: block;
-        cursor: pointer;
     }
 
     .hamburger.active .bar:nth-child(2) {
@@ -139,4 +149,7 @@ a {
         transform: translateY(-8px) rotate(-45deg);
     }
 
+    .hidden {
+        scale: 0;
+    }
 }
