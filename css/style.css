@@ -266,6 +266,11 @@ h6 {
     background-color: #529ad4;
 }
 
+#contato a{
+    text-decoration: none;
+    color: #4682b4;
+}
+
 /* Ajustes gerais para as seções */
 
 .section h2 {
@@ -298,6 +303,11 @@ h6 {
 .projeto img {
     max-width: 100%;
     border-radius: 5px;
+}
+
+.projeto a{
+    text-emphasis: none;
+    color: #4682b4;
 }
 
 .projeto:hover {
