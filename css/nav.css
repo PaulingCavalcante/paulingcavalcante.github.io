@@ -27,7 +27,7 @@ header .logo {
 
 header .logo h1 {
     color: black;
-    font-size: 1.5rem;
+    font-size: 110%;
     font-weight: bold;
     letter-spacing: 2px;
     background: linear-gradient(90deg, #0062ff 0%, #61efff 100%);
@@ -95,7 +95,7 @@ header .logo h1:hover {
 }
 
 /* Responsivo */
-@media only screen and (max-width: 830px) {
+@media only screen and (max-width: 873px) {
 
 
     header .logo {
