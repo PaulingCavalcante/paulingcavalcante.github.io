@@ -9,7 +9,7 @@ document.getElementById('contatoForm').addEventListener('submit', function (even
     })
         .then(response => response.text())
         .then(data => {
-            alert(data); // Mostra uma mensagem de sucesso ou erro
+            console.log(data); // Mostra uma mensagem de sucesso ou erro
             document.getElementById('contatoForm').reset(); // Limpa o formulário
         })
         .catch(error => console.error('Erro:', error));
